@@ -2,7 +2,7 @@
 	angular.module('LunchCheckerApp',[])
 	.controller('LunchCheckerController',LunchCheckerController)
 
-	
+	LunchCheckerController.$inject=['$scope'];
 
 	function LunchCheckerController($scope){
 		$scope.items = "";
@@ -11,7 +11,7 @@
 			//console.log("In function");
 			var items_array = $scope.items.split(",");
 			//console.log(items_array);
-		
+
 
 			var count = calculateCount(items_array);
 			//console.log("count = ",count);
